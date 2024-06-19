@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
-        <div className='w-full h-[100v] bg-white'>
+        <div className='w-full h-[100vh] bg-white'>
             <div className="w-[90%] m-auto py-10">
 
                 <div className="w-full mb-5">
@@ -29,7 +29,7 @@ const Login = () => {
                     <div className="text-left mb-9 flex flex-col gap-2">
                         <label htmlFor="" className="text-[15.04px] text-[#4F4F4F] font-bold text-left">Password</label>
                         <div className="border border-[#BDBDBD] flex items-center justify-between px-2 py-1">
-                            <input type="password" placeholder='**********' className="py-2 w-full bg-transparent focus:outline-none text-[#4F4F4F]"/>
+                            <input type="password" placeholder='**********' required className="py-2 w-full bg-transparent focus:outline-none text-[#4F4F4F]"/>
                             <img src={eyeoff} alt="" className="hidden"/>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const Login = () => {
 
                     <p className="text-[14px] text-[#030303] font-semibold text-center mb-3">Don't have an account? </p>
 
-                    <Link className="text-[14px] text-[#53B175] font-semibold text-center">Sign up</Link>
+                    <Link to='/sign-up' className="text-[14px] text-[#53B175] font-semibold text-center w-full inline-block">Sign up</Link>
 
                     <Link className="border rounded-3xl border-[#53B175] flex items-center justify-center gap-2 mt-5 mb-5">
                         <img src={google} alt="" />
