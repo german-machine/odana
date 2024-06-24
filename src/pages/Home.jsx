@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from '../components/Header'
-import Hero from '../components/Hero'
+import WhyFraud from '../components/WhyFraud'
+import HowItWorks from '../components/HowItWorks'
 
 const Home = () => {
     return (
-        <div className="w-full">
+        <div className="w-full h-full relative -top-[2px]">
             <Header />
-            <Hero />
+            <WhyFraud />
+            <HowItWorks />
         </div>
     )
 }
