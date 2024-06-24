@@ -1,26 +1,44 @@
-import React from 'react'
-import cart from '../assets/images/cart.png'
-import shop from '../assets/images/shop.png'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { MdOutlineShoppingCart } from 'react-icons/md'
+import { BsShop } from 'react-icons/bs'
 
 const ChooseUser = () => {
+    const [user, setUser] = useState(['buyer', 'seller'])
+
+    function buyerSelect() {
+        setUser('buyer')
+    }
+
+    function sellerSelect() {
+        setUser('seller')
+    }
+
     return (
         <div className="w-full bg-white h-[100vh]">
             <div className="w-[90%] mx-auto my-auto py-10 flex flex-col">
                 <h3 className="text-black text-[20px] text-center font-semibold mb-10">Sign up as a</h3>
                 <div className="-full flex flex-col justify-center">
-                    <Link className="bg-[#299B56] w-[80%] h-[108px] m-auto mb-8 rounded-md flex items-center justify-center gap-3 text-center">
-                        <img src={cart} alt="" />
-                        <p className='text-white text-[20px] font-semibold'>Buyer</p>
-                    </Link>
-                    <Link className="w-[80%] h-[108px] border border-solid border-[#299B56] m-auto mb-8 rounded-md flex items-center gap-3 text-center justify-center">
-                        <img src={shop} alt="" />
-                        <p className='text-[#299B56] text-[20px] font-semibold'>Seller</p>
-                    </Link>
+                    <div onClick={buyerSelect} className={`cursor-pointer ${user === 'buyer' ? 'bg-[#299B56]' : 'border border-solid border-[#299B56]'} w-[80%] h-[108px] m-auto mb-8 rounded-md flex items-center justify-center gap-3 text-center`}>
+                        <MdOutlineShoppingCart className={`text-[35px] font-bold ${user === 'buyer' ? 'text-white' : 'text-[#299B56]'} `}/>
+                        <p className={`${user === 'buyer' ? 'text-white' : 'text-[#299B56]'} text-[20px] font-semibold`}>Buyer</p>
+                    </div>
+                    <div onClick={sellerSelect} className={`cursor-pointer w-[80%] h-[108px] ${user === 'seller' ? 'bg-[#299B56]' : 'border border-solid border-[#299B56]'} m-auto mb-8 rounded-md flex items-center gap-3 text-center justify-center`}>
+                        <BsShop className={`text-[35px] font-bold ${user === 'seller' ? 'text-white' : 'text-[#299B56]'} `}/>
+                        <p className={`${user === 'seller' ? 'text-white' : 'text-[#299B56]'} text-[20px] font-semibold`}>Seller</p>
+                    </div>
                 </div>
-                <Link to='/sign-up' className="bg-[#299B56] w-[90%] m-auto text-center inline-block py-2 rounded-2xl">
+                <Link to={user === 'buyer' ? '/sign-up-buyer' : user === 'seller' ? '/sign-up-seller' : ''} className="bg-[#299B56] w-[90%] m-auto text-center inline-block py-3 rounded-2xl">
                     <p className='text-white text-[14px] font-semibold'>Next</p>
                 </Link>
+
+                <div className="flex gap-2 absolute bottom-[50px] right-[10% left-[440%]">
+                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
+                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
+                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
+                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
+                    <div className={`block w-[10px] h-[10px] bg-[#299B56] rounded-full`}></div>
+                </div>
             </div>
         </div>
     )
