@@ -1,16 +1,20 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
-import SignUp from './pages/SignUp'
+import SignUpBuyer from './pages/SignUpBuyer'
+import SignUpSeller from './pages/SignUpSeller'
 import ChooseUser from './pages/ChooseUser'
+import GetStarted from './pages/GetStarted'
 
 function App() {
 
   return (
     <Routes>
         <Route index element={<Home />} />
+        <Route path='/get-started' element={<GetStarted />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/sign-up-buyer' element={<SignUpBuyer />} />
+        <Route path='/sign-up-seller' element={<SignUpSeller />} />
         <Route path='/signup-as' element={<ChooseUser />} />
     </Routes>
   )
