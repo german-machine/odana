@@ -31,14 +31,6 @@ const ChooseUser = () => {
                 <Link to={user === 'buyer' ? '/sign-up-buyer' : user === 'seller' ? '/sign-up-seller' : ''} className="bg-[#299B56] w-[90%] m-auto text-center inline-block py-3 rounded-2xl">
                     <p className='text-white text-[14px] font-semibold'>Next</p>
                 </Link>
-
-                <div className="flex gap-2 absolute bottom-[50px] right-[10% left-[440%]">
-                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
-                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
-                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
-                    <div className={`block w-[10px] h-[10px] bg-[#9F9F9F] rounded-full`}></div>
-                    <div className={`block w-[10px] h-[10px] bg-[#299B56] rounded-full`}></div>
-                </div>
             </div>
         </div>
     )
