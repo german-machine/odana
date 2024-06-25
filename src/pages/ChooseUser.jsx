@@ -15,8 +15,8 @@ const ChooseUser = () => {
     }
 
     return (
-        <div className="w-full bg-white h-[100vh]">
-            <div className="w-[90%] mx-auto my-auto py-10 flex flex-col">
+        <div className="w-full bg-white h-[100vh] flex">
+            <div className="w-[90%] mx-auto my-auto py-10 flex flex-col justify-center h-[80%]">
                 <h3 className="text-black text-[20px] text-center font-semibold mb-10">Sign up as a</h3>
                 <div className="-full flex flex-col justify-center">
                     <div onClick={buyerSelect} className={`cursor-pointer ${user === 'buyer' ? 'bg-[#299B56]' : 'border border-solid border-[#299B56]'} w-[80%] h-[108px] m-auto mb-8 rounded-md flex items-center justify-center gap-3 text-center`}>
