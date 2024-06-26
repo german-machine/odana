@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import login from '../assets/images/login.png'
-import logoDesk from '../assets/images/odana-logo-small.png'
+import logoDesk from '../assets/images/white-small.png'
 import arrowDown from '../assets/images/arrowDown.png'
 import bgHero from '../assets/images/bg-hero.png'
 import mobHero from '../assets/images/mobile-bg.png'
