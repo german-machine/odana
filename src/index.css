@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .carousel-container {
-    position: relativ;
+    position: relative;
 }
 
 .carousel-slide {
@@ -13,8 +13,8 @@
 
 .carousel-image {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    max-height: max-content;
+    object-fit: contain;
 }
 
 :root {
