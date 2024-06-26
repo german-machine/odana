@@ -42,7 +42,7 @@ export const GET_STARTED = [
         id: '2',
         img: manWoman,
         title: 'Shop smart online',
-        content: 'Udana allow various parties to engage in the exchange of goods and services within a sale and purchase agreement teams.'
+        content: 'Odana allow various parties to engage in the exchange of goods and services within a sale and purchase agreement teams.'
     },
     {
         id: '3',
