@@ -27,16 +27,16 @@ const Carousel = () => {
                     <div
                         key={item.id}
                         className={`w-full flex-shrink-0 transition-transform duration-300 transform ${index === currentIndex ? 'translate-x-0' : 'translate-x-full'
-                            } grid place-items-center`}
+                            } grid place-items-center `}
                         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                     >
                         <img
                             src={item.img}
                             alt={item.title || 'Slide image'}
-                            className="carousel-image w-full max-h-72 object-cover"
+                            className="carousel-image w-full max-h-72 object-cover mb-5"
                         />
-                        {item.title && <h3 className="mt-4 text-xl font-semibold">{item.title}</h3>}
-                        {item.content && <p className="mt-2 text-gray-600">{item.content}</p>}
+                        {item.title && <h3 className="mt-4 mb-2 text-2xl md:text-3xl text-center text-[rgba(0,0,0,0.87)] font-semibold">{item.title}</h3>}
+                        {item.content && <p className="text-gray-600 md:text-2xl text-center">{item.content}</p>}
                     </div>
                 ))}
             </div>
@@ -45,21 +45,21 @@ const Carousel = () => {
                     onClick={prevSlide}
                     className="absolute -bottom-[70px] left-2 transform -translate-y-1/2 bg-[#299B56] p-2 rounded-full shadow-lg"
                 >
-                    <IoIosArrowBack className='text-white text-[20px]' />
+                    <IoIosArrowBack className='text-white text-[20px] md:text-[40px]' />
                 </button>
             )}
             <Link to={currentIndex === GET_STARTED.length - 1 ? '/signup-as' : ''}
                 onClick={nextSlide}
                 className="absolute -bottom-[70px] right-2 transform -translate-y-1/2 bg-[#299B56] p-2 rounded-full shadow-lg"
             >
-                <IoIosArrowForward className='text-white text-[20px]' />
+                <IoIosArrowForward className='text-white text-[20px] md:text-[40px]' />
             </Link>
             <div className="absolute -bottom-[80px] left-0 right-0 flex justify-center space-x-2">
                 {GET_STARTED.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setCurrentIndex(index)}
-                        className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-[#299B56]' : 'bg-gray-300'
+                        className={`w-2 md:w-3 h-2 md:h-3 rounded-full ${index === currentIndex ? 'bg-[#299B56]' : 'bg-gray-300'
                             }`}
                     />
                 ))}
