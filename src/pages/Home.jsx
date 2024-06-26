@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import WhyFraud from '../components/WhyFraud'
 import HowItWorks from '../components/HowItWorks'
+import ToTop from '../components/ToTop'
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Header />
             <WhyFraud />
             <HowItWorks />
+            <ToTop />
         </div>
     )
 }
