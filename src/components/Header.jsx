@@ -85,7 +85,7 @@ const Header = () => {
                                         <Link to='/login' onClick={handleRemoveMenu}>Login</Link>
                                     </li>
 
-                                    <li className="w-[80%] md:w-[50%] lg:w-fit text-center m-auto border-[2px] border-solid border-white rounded-full py-2 md:py-4 lg:py-2 px-3 md:px-0 lg:px-4 hover:bg-[#197831] hover:text-white duration-1000 mb-4">
+                                    <li className="w-[80%] md:w-[50%] lg:w-fit text-center m-auto border-[2px] border-solid border-white rounded-full py-2 md:py-4 lg:py-2 px-3 md:px-0 lg:px-4 hover:bg-[#197831] hover:text-white duration-1000 mb-4 lg:mb-0">
                                         <Link to='/get-started' onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">Sign Up</Link>
                                     </li>
                                 </div>
