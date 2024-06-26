@@ -40,7 +40,7 @@ const Login = () => {
 
                         <p className="text-[18px] md:text-[22px] text-[#030303] font-semibold text-center mb-3">Don't have an account? </p>
 
-                        <Link to='/get-started' className="w-fit m-auto flex text-[20px] md:text-[24px] text-[#53B175] font-semibold text-center">Sign up</Link>
+                        <Link to={window.innerWidth > 912 ? '/signup-as' : '/get-started'} className="w-fit m-auto flex text-[20px] md:text-[24px] text-[#53B175] font-semibold text-center">Sign up</Link>
 
                         <Link className="md:w-[60%] m-auto border rounded-3xl border-[#53B175] flex items-center justify-center gap-2 mt-3 mb-3">
                             <img src={google} alt="" width={30} />
