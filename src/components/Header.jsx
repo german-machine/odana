@@ -47,60 +47,60 @@ const Header = () => {
             <div className={`${navPosition} top-0 left-0 right-0 duration-[3s] transition-all scroll-smooth shadow-3xl backdrop-blur-xl bg-[#1C7D33] `} >
                 <div className="w-[90%] md:w-[85%] lg:w-[80%] m-auto py-4">
                     <div className="w-full flex justify-between items-center">
-                        <div className="w-[30%] md:w-[22%] lg:w-[18%]">
+                        <div className="w-[30%] md:w-[28%] lg:w-[18%]">
                             <img src={logoDesk} alt="" />
                         </div>
 
-                        <div className={`${show ? 'flex flex-col animate-slideIn fixed lg:relative lg:animate-none lg:opacity-100 right-0 left-0 top-[65px] lg:top-0' : 'animate-slideOut lg:animate-none absolute lg:relative -top-[1000px] lg:top-0 left-0 lg:left-0 right-0 lg:right-0 opacity-0 lg:opacity-100 shadow-xl lg:shadow-none'} ${removeMenu === 'true' ? 'hidden' : 'block'} lg:block w-full lg:w-fit bg-[#197831] z-[1000] lg:bg-transparent transition-all duration-500`}>
-                            <ul className="flex flex-col lg:flex-row lg:gap-5 lg:items-center">
-                                <div className="w-[90%] lg:w-fit m-auto lg:m-0 flex flex-col text-center lg:flex-row gap-10 py-10 lg:py-0 lg:gap-5 mr-5">
+                        <div className={`${show ? 'flex flex-col animate-slideIn fixed lg:relative lg:animate-none lg:opacity-100 right-0 left-0 top-[65px] md:top-[94px] lg:top-0' : 'animate-slideOut lg:animate-none absolute lg:relative -top-[1000px] lg:top-0 left-0 lg:left-0 right-0 lg:right-0 opacity-0 lg:opacity-100 shadow-xl lg:shadow-none'} ${removeMenu === 'true' ? 'hidden' : 'block'} lg:block w-full lg:w-fit bg-[#197831] z-[1000] lg:bg-transparent transition-all duration-500`}>
+                            <ul className="flex flex-col items-center justify-center lg:flex-row lg:gap-5 lg:items-center">
+                                <div className="w-[90%] md:w-full lg:w-fit m-auto lg:m-0 flex flex-col text-center lg:flex-row gap-10 py-10 lg:py-0 lg:gap-5 mr-5">
                                     <li>
-                                        <HashLink smooth to='/#home' onClick={handleRemoveMenu} >Home</HashLink>
+                                        <HashLink smooth to='/#home' onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">Home</HashLink>
                                     </li>
 
                                     <li>
-                                        <HashLink smooth to='/#' onClick={handleRemoveMenu}>Buying</HashLink>
+                                        <HashLink smooth to='/#' onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">Buying</HashLink>
                                     </li>
 
                                     <li>
-                                        <HashLink smooth to='/#' onClick={handleRemoveMenu}>Selling</HashLink>
+                                        <HashLink smooth to='/#' onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">Selling</HashLink>
                                     </li>
 
                                     <li>
                                         <HashLink smooth to='/#' onClick={handleRemoveMenu}>
                                             <div className="flex justify-center lg:justify-evenly">
-                                                <p>Client Directory</p>
-                                                <img src={arrowDown} alt="" />
+                                                <p className="md:text-[22px] lg:text-[16px] ">Client Directory</p>
+                                                <img src={arrowDown} alt="" className="md:text-[22px] lg:text-[16px] " />
                                             </div>
                                         </HashLink>
                                     </li>
 
                                     <li>
-                                        <HashLink smooth to='/#' onClick={handleRemoveMenu}>About Us</HashLink>
+                                        <HashLink smooth to='/#' onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">About Us</HashLink>
                                     </li>
                                 </div>
 
-                                <div className="flex gap-4 lg:items-center py-4 lg:py-0">
+                                <div className="w-[90%] md:w-full lg:w-max m-auto flex gap-4 lg:items-center py-4 lg:py-0">
                                     <li className="hidden lg:block">
                                         <Link to='/login' onClick={handleRemoveMenu}>Login</Link>
                                     </li>
 
-                                    <li className="inline-block w-[80%] lg:w-fit text-center m-auto border border-solid border-white rounded-md py-1 px-3 hover:bg-[#197831] hover:text-white duration-1000">
-                                        <Link to='/get-started' onClick={handleRemoveMenu}>Sign Up</Link>
+                                    <li className="w-[80%] md:w-[50%] lg:w-fit text-center m-auto border-[2px] border-solid border-white rounded-full py-2 md:py-4 lg:py-2 px-3 md:px-0 lg:px-4 hover:bg-[#197831] hover:text-white duration-1000 mb-4">
+                                        <Link to='/get-started' onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">Sign Up</Link>
                                     </li>
                                 </div>
 
                             </ul>
                         </div>
 
-                        <div className="w-[50%] flex items-center justify-evenly lg:hidden">
-                            <div className="flex items-center bg-[#38B148] px-2 py-1 gap-2">
-                                <Link to='/login' className='flex items-center gap-2'>Login
-                                    <img src={login} alt="" />
+                        <div className="w-[50%] md:w-[40%] flex items-center justify-evenly md:justify-between lg:hidden">
+                            <div className="md:w-[70] flex items-center bg-[#38B148] px-2 md:px-4 py-1 md:py-3 gap-2">
+                                <Link to='/login' className='flex items-center gap-2 md:text-[22px]'>Login
+                                    <img src={login} alt="" className='md:text-[22px]' />
                                 </Link>    
                             </div>
                             <div>
-                                {show ? <IoIosClose className="text-[30px] md:text-[45px] duration-1000 cursor-pointer" onClick={handleClick} /> : <IoIosMenu className="text-[25px] duration-1000 cursor-pointer" onClick={handleClick} />}
+                                {show ? <IoIosClose className="text-[30px] md:text-[60px] duration-1000 cursor-pointer" onClick={handleClick} /> : <IoIosMenu className="text-[25px] md:text-[50px] duration-1000 cursor-pointer" onClick={handleClick} />}
                             </div>
                         </div>
                     </div>
