@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
-        <div className='w-full h-[100vh] lg:h-full bg-white'>
-            <div className="w-[90%] m-auto py-10 xl:py-2 h-full ">
+        <div className='w-full h-screen lg:h-full bg-white fle'>
+            <div className="w-[90%] m-auto py-10 xl:py-2 h-full">
                     <div className="w-full mb-5 flex flex-col items-center">
                         <h3 className="text-[28px] md:text-[70px] lg:text-[50px] font-semibold text-left md:text-center text-[#030303]">Login</h3>
                         <p className="text-[18px] md:text-[30px] lg:text-[22px] text-[#7C7C7C] text-left md:text-center">Enter your credentials to continue</p>
@@ -32,8 +32,8 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <Link className="md:w-[60%] m-auto border bg-[#299B56] text-center flex justify-center rounded-3xl items-center mb-5">
-                            <Link className="flex items-center text-center py-2 md:py-1">
+                        <Link className="md:w-[70%] m-auto border bg-[#299B56] text-center flex justify-center rounded-3xl items-center mb-5">
+                            <Link className="flex items-center text-center py-2 md:py-2">
                                 <p className='text-[18px] md:text-[24px]'>Login</p>
                             </Link>
                         </Link>
@@ -42,14 +42,14 @@ const Login = () => {
 
                         <Link to={window.innerWidth > 912 ? '/signup-as' : '/get-started'} className="w-fit m-auto flex text-[20px] md:text-[24px] text-[#53B175] font-semibold text-center">Sign up</Link>
 
-                        <Link className="md:w-[60%] m-auto border rounded-3xl border-[#53B175] flex items-center justify-center gap-2 mt-3 mb-3">
+                        <Link className="md:w-[70%] m-auto border rounded-3xl border-[#53B175] flex items-center justify-center gap-2 mt-3 mb-3">
                             <img src={google} alt="" width={30} />
-                            <Link className="text-[16px] md:text-[18px] font-semibold text-[#299B56] py-2">Login with Google</Link>
+                            <Link className="text-[16px] md:text-[19px] font-semibold text-[#299B56] py-2 md:py-3">Login with Google</Link>
                         </Link>
 
-                        <Link className="md:w-[60%] m-auto border rounded-3xl border-[#53B175] flex items-center justify-center gap-2">
+                        <Link className="md:w-[70%] m-auto border rounded-3xl border-[#53B175] flex items-center justify-center gap-2">
                             <img src={apple} alt="" width={30} />
-                            <p className="text-[16px] md:text-[18px] font-semibold text-[#299B56] py-2">Login with Apple</p>
+                            <p className="text-[16px] md:text-[19px] font-semibold text-[#299B56] py-2 md:py-3">Login with Apple</p>
                         </Link>
                     </form>                
             </div>
