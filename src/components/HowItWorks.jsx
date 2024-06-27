@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 const HowItWorks = () => {
     return (
-        <div style={{ backgroundImage: `url(${window.innerWidth > 690 ? bgHero : mobHero})` }}>
+        <div style={{ backgroundImage: `url(${window.innerWidth > 690 ? bgHero : mobHero})`, backgroundPosition: 'center' }}>
             <div className="w-[90%] lg:w-[80%] m-auto py-10">
                 <h1 className='text-[27px] md:text-[34px] font-bold text-center '>How It Works</h1>
                 <p className='text-[18px] md:text-[22px] lg:text-[18px] text-center font-normal leading-[30px]'>ODANA protects buyers and sellers by holding the buyer’s funds in the ODANA holding account until the seller delivers the goods or fulfils their obligations. Buyers get and confirmed what they paid for, and sellers are guaranteed payment.</p>
