@@ -15,7 +15,7 @@ const Header = () => {
     const [removeMenu, setRemoveMenu] = useState(false)
 
     function handleClick() {
-        setShow(!show);
+        setShow(!show)
     }
     
     function handleRemoveMenu() {
@@ -86,7 +86,7 @@ const Header = () => {
                                     </li>
 
                                     <li className="w-[80%] md:w-[50%] lg:w-fit text-center m-auto border-[2px] border-solid border-white rounded-full py-2 md:py-4 lg:py-2 px-3 md:px-0 lg:px-4 hover:bg-[#197831] hover:text-white duration-1000 mb-4 lg:mb-0">
-                                        <Link to='/get-started' onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">Sign Up</Link>
+                                        <Link to={window.innerWidth > 912 ? '/signup-as' : '/get-started'} onClick={handleRemoveMenu} className="md:text-[22px] lg:text-[16px] ">Sign Up</Link>
                                     </li>
                                 </div>
 
@@ -100,7 +100,7 @@ const Header = () => {
                                 </Link>    
                             </div>
                             <div>
-                                {show ? <IoIosClose className="text-[30px] md:text-[60px] duration-1000 cursor-pointer" onClick={handleClick} /> : <IoIosMenu className="text-[25px] md:text-[50px] duration-1000 cursor-pointer" onClick={handleClick} />}
+                                {show ? <IoIosClose className="text-[40px] md:text-[60px] duration-1000 cursor-pointer" onClick={handleClick} /> : <IoIosMenu className="text-[35px] md:text-[50px] duration-1000 cursor-pointer" onClick={handleClick} />}
                             </div>
                         </div>
                     </div>
