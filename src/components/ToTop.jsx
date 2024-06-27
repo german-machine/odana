@@ -20,7 +20,7 @@ const ToTop = () => {
     })
 
   return (
-      <div className={`${scrolled ? 'flex opacity-100' : 'opacity-0'} justify-center items-center fixed bottom-[15px] cursor-pointer right-[15px] bg-[#38B148] hover:bg-[#2b8838] rounded-full duration-1000 `} id='toTop'>
+      <div className={`${scrolled ? 'flex opacity-100' : 'opacity-0'} justify-center items-center py-1 md:py-2 px-1 md:px-2 fixed bottom-[40px] md:bottom-[45px] cursor-pointer right-[35px] md:right-[45px] bg-[#38B148] hover:bg-[#2b8838] rounded-full duration-1000 `} id='toTop'>
         <MdKeyboardArrowUp className='text-[40px]' />
     </div>
   )
