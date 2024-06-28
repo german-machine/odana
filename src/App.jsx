@@ -5,18 +5,21 @@ import SignUpBuyer from './pages/SignUpBuyer'
 import SignUpSeller from './pages/SignUpSeller'
 import ChooseUser from './pages/ChooseUser'
 import GetStarted from './pages/GetStarted'
+import { LoadingProvider } from './components/LoadingContext'
 
 function App() {
 
   return (
-    <Routes>
-        <Route index element={<Home />} />
-        <Route path='/get-started' element={<GetStarted />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/sign-up-buyer' element={<SignUpBuyer />} />
-        <Route path='/sign-up-seller' element={<SignUpSeller />} />
-        <Route path='/signup-as' element={<ChooseUser />} />
-    </Routes>
+    <LoadingProvider>
+        <Routes>
+            <Route index element={<Home />} />
+            <Route path='/get-started' element={<GetStarted />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/sign-up-buyer' element={<SignUpBuyer />} />
+            <Route path='/sign-up-seller' element={<SignUpSeller />} />
+            <Route path='/signup-as' element={<ChooseUser />} />
+        </Routes>          
+    </LoadingProvider>
   )
 }
 
